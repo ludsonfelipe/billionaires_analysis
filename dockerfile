@@ -2,6 +2,6 @@ FROM jupyter/minimal-notebook
 
 WORKDIR /analysis
 
-COPY ./games_analytics /analysis
+COPY ./billionaires_analysis /analysis
 
 CMD ["jupyter","notebook"]

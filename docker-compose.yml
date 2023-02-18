@@ -5,24 +5,24 @@ services:
     ports:
       - 8888:8888
     networks:
-      - gamesnetwork
+      - analysisnetwork
 
   db:
     image: postgres:13.1
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: gamesdb
+      POSTGRES_DB: analysisdb
     ports:
       - 5432:5432
     volumes:
-      - gamesdb:/var/lib/postgresql/data
+      - analysisdb:/var/lib/postgresql/data
 
     networks:
-      - gamesnetwork
+      - analysisnetwork
 
 volumes:
-  gamesdb:
+  analysisdb:
 
 networks:
-  gamesnetwork:
+  analysisnetwork:
